@@ -1,7 +1,7 @@
 # about-statistic-analyze
-統計分析についての備忘録です.  
-主に2群間についての統計処理について書きます.
-付随してpythonのコードを載せておきます.
+統計分析についての備忘録.  
+主に2群間についての統計処理について.
+付随してpythonのコードも載せておく.
 
 ## 対応のあるt検定(2群間)
 データに対応がある場合に使用. 主に事前テストと事後テストの平均値の差を比較をするときに使う.
@@ -18,7 +18,7 @@ stats.ttest_rel(A, B)
 ```
 [stats.ttest_rel()](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_rel.html)
 
-効果量を知りたいときは[Cohen's d](#cohens-d)を参照.
+効果量を知りたいときは[Cohen's d](#cohens-d).
 
 ## 対応のないt検定(2群間)
 データに対応が無い場合に使用. 主にA群とB群の試験の結果を比較するのに使う.
@@ -50,12 +50,12 @@ stats.ttest_ind(A, B)
 ```python
 stats.ttest_ind(A, B, equal_var=False)
 ```
-ここまで等分散か検定する→等平均か検定するという流れを書きましたが, 
+ここまで等分散か検定する→等平均か検定するという流れを書いたが, 
 昨今は2群間の対応の無いt検定の場合, 等分散かどうかに関わらずデフォルトで
-Welchのt検定をしようという流れがあるらしいです. 
+Welchのt検定をしようという流れがあるらしい. 
 
 ## Cohen's d
-効果量です. 一般的に0.2: 小, 0.5: 中, 0.8: 大.
+効果量. 一般的に0.2: 小, 0.5: 中, 0.8: 大.
 
 ```python
 def cohens_d(x1, x2):
